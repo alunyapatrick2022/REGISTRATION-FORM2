@@ -184,6 +184,11 @@ gender = jRadioButton2.getText();
 String address = jTextPane1.getText();
 String contact = jTextField3.getText();
 
+String Name[] = {ID,name,gender,address,contact};
+DefaultTableModel data = (DefaultTableModel)jTable1.getModel();
+data.addRow(Name);
+   
+
  
         
  
@@ -215,25 +220,14 @@ else {
         e.printStackTrace();
     }
  
-  DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
-   
- int numRows = jTable1.getRowCount();
- int  i;
- 
- for (i=0;i<=numRows;i++) {
-     model.setValueAt(ID,i,0);
-     model.setValueAt(name,i,1);
-     model.setValueAt(gender,i,2);
-     model.setValueAt(address,i,3);
-     model.setValueAt(contact,i,4);
-     
- }
+  
  
  jTextField1.setText("");
  jTextField2.setText("");
  jTextPane1.setText("");
  jTextField3.setText("");
- jTable1.setModel(model);
+ 
+   
  
  
   
